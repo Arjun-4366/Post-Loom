@@ -36,7 +36,7 @@ function PostCard({ open, setOpen }) {
         <>
           <div className="flex items-center p-4 border-b" key={post._id}>
             <img
-              src={`http://localhost:4001/Images/${post.userId.image}`}
+              src={`https://post-loom.onrender.com/Images/${post.userId.image}`}
               alt="akhilpic"
               className="h-12 w-12 rounded-full object-cover border-2 border-gray-200 mr-3"
             />
