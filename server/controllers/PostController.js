@@ -4,7 +4,7 @@ const createNewPost = async (req, res) => {
   try {
     const { title, description,userId } = req.body;
     console.log(req.body)
-    // console.log(req.file)
+  
     const newPost = new Post({ title, description, image:req.file.filename ,userId:userId});
     await newPost.save();
     res.status(201).json(newPost);
