@@ -23,7 +23,7 @@ function PostCard({ open, setOpen }) {
 
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`http://localhost:4001/api/posts/${postId}`);
+      await axios.delete(`https://post-loom.onrender.com/api/posts/${postId}`);
       setPostData(postData.filter((post) => post._id !== postId));
     } catch (error) {
       console.log(error.message);
