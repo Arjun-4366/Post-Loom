@@ -4,6 +4,7 @@ import { FaPodcast } from "react-icons/fa";
 import { CiCirclePlus, CiLogout } from "react-icons/ci";
 import NewPost from "./NewPost";
 import { MdOutlineExitToApp } from "react-icons/md";
+import { API_URL } from "../utils/apiConfig";
 
 function Navbar() {
   const navigate = useNavigate();
@@ -42,7 +43,7 @@ function Navbar() {
         />
         
         <div className="p-2">
-          <img src={`http://localhost:4001/Images/${userData.image}`} alt="User" className="w-12 h-12 rounded-full" />
+          <img src={`${API_URL}/Images/${userData.image}`} alt="User" className="w-12 h-12 rounded-full" />
         </div>
         {userData && (
            <MdOutlineExitToApp onClick={handleLogout} className="text-2xl text-red-500 cursor-pointer"/>

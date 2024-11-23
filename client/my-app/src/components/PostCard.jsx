@@ -2,6 +2,7 @@ import axios from "axios";
 import React, { useEffect, useState } from "react";
 import { FaPen, FaTrashAlt } from "react-icons/fa";
 import UpdatePost from "./UpdatePost";
+import { API_URL } from "../utils/apiConfig";
 
 function PostCard({ open, setOpen }) {
   const [postData, setPostData] = useState([]);
@@ -55,7 +56,7 @@ function PostCard({ open, setOpen }) {
             )}
           </div>
           <img
-            src={`http://localhost:4001/Images/${post.image}`}
+            src={`${API_URL}/Images/${post.image}`}
             alt="sample"
             className="object-cover w-full h-auto rounded-b-lg"
           />

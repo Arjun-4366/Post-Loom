@@ -1,6 +1,7 @@
 import React, { useEffect, useRef, useState } from "react";
 import { Modal } from "antd";
 import axios from "axios"
+import { API_URL } from "../utils/apiConfig";
 
 function NewPost({ open, setOpen }) {
   
@@ -40,7 +41,7 @@ console.log("user",userData)
     formData.append("image",image)
     formData.append("description",description)
     try{
-     const response = await axios.post("http://localhost:4001/api/posts",formData,{
+     const response = await axios.post(`${API_URL}/api/posts`,formData,{
       headers:{
         "Content-Type":"multipart/form-data"
       }

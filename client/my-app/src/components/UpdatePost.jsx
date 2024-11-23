@@ -1,6 +1,7 @@
 import { Modal } from "antd";
 import axios from "axios";
 import React, { useRef, useState, useEffect } from "react";
+import { API_URL } from "../utils/apiConfig";
 
 function UpdatePost({ open, setOpen, postData }) {
   const [previewImage, setPreviewImage] = useState(null);
@@ -14,7 +15,7 @@ function UpdatePost({ open, setOpen, postData }) {
   useEffect(() => {
     if (postData) {
       setDescription(postData.description);
-      setPreviewImage(`http://localhost:4001/Images/${postData.image}`);
+      setPreviewImage(`${API_URL}/Images/${postData.image}`);
     }
   }, [open, postData]);
 

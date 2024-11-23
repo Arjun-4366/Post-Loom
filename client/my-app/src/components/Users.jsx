@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, { useEffect } from "react";
 import { useState } from "react";
+import { API_URL } from "../utils/apiConfig";
 
 function Users() {
   const [users, setUsers] = useState([]);
@@ -25,7 +26,7 @@ function Users() {
             key={user.id}
             className="flex items-center bg-gray-50 shadow-sm hover:shadow-md rounded-lg p-3 transition duration-200">
             <img
-              src={`http://localhost:4001/Images/${user.image}`}
+              src={`${API_URL}/Images/${user.image}`}
               alt={user.name}
               className="w-12 h-12 rounded-full object-cover mr-3 border-2 border-gray-200"
             />
