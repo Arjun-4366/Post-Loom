@@ -11,7 +11,7 @@ function PostCard({ open, setOpen }) {
   const userData = JSON.parse(localStorage.getItem("userDetails"));
   const fetchPostData = async () => {
     try {
-      const response = await axios.get("http://localhost:4001/api/posts");
+      const response = await axios.get("https://post-loom.onrender.com/api/posts");
       setPostData(response.data);
     } catch (error) {
       console.log(error.message);
