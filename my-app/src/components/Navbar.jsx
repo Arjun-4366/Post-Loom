@@ -43,7 +43,7 @@ function Navbar() {
         />
         
         <div className="p-2">
-          <img src={`https://post-loom.onrender.com/Images/${userData.image}`} alt="User" className="w-12 h-12 rounded-full" />
+          <img src={`${API_URL}/Images/${userData.image}`} alt="User" className="w-12 h-12 rounded-full" />
         </div>
         {userData && (
            <MdOutlineExitToApp onClick={handleLogout} className="text-2xl text-red-500 cursor-pointer"/>

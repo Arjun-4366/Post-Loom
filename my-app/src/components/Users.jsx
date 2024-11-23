@@ -8,7 +8,7 @@ function Users() {
 
   const fetchUsers = async () => {
     try {
-      const response = await axios.get("https://post-loom.onrender.com/api/users");
+      const response = await axios.get(`${API_URL}/api/users`);
       setUsers(response.data.allUsers);
     } catch (error) {
       console.log(error.message);
@@ -26,7 +26,7 @@ function Users() {
             key={user.id}
             className="flex items-center bg-gray-50 shadow-sm hover:shadow-md rounded-lg p-3 transition duration-200">
             <img
-              src={`https://post-loom.onrender.com/Images/${user.image}`}
+              src={`${API_URL}/Images/${user.image}`}
               alt={user.name}
               className="w-12 h-12 rounded-full object-cover mr-3 border-2 border-gray-200"
             />

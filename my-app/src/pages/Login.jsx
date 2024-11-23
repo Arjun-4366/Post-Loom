@@ -1,6 +1,7 @@
 import axios from "axios";
 import React, {useState } from "react";
 import { useNavigate } from "react-router-dom";
+import { API_URL } from "../utils/apiConfig";
 
 function Login() {
   const [userData, setUserData] = useState({
@@ -26,7 +27,7 @@ function Login() {
         },
       };
       const response = await axios.post(
-        "https://post-loom.onrender.com/api/login",
+       `${API_URL}/api/login`,
         formData,
         config
       );

@@ -11,7 +11,7 @@ function PostCard({ open, setOpen }) {
   const userData = JSON.parse(localStorage.getItem("userDetails"));
   const fetchPostData = async () => {
     try {
-      const response = await axios.get("https://post-loom.onrender.com/api/posts");
+      const response = await axios.get(`${API_URL}/api/posts`);
       setPostData(response.data);
     } catch (error) {
       console.log(error.message);
@@ -23,7 +23,7 @@ function PostCard({ open, setOpen }) {
 
   const handleDelete = async (postId) => {
     try {
-      await axios.delete(`https://post-loom.onrender.com/api/posts/${postId}`);
+      await axios.delete(`${API_URL}/api/posts/${postId}`);
       setPostData(postData.filter((post) => post._id !== postId));
     } catch (error) {
       console.log(error.message);
@@ -36,7 +36,7 @@ function PostCard({ open, setOpen }) {
         <>
           <div className="flex items-center p-4 border-b" key={post._id}>
             <img
-              src={`https://post-loom.onrender.com/Images/${post.userId.image}`}
+              src={`${API_URL}/Images/${post.userId.image}`}
               alt="akhilpic"
               className="h-12 w-12 rounded-full object-cover border-2 border-gray-200 mr-3"
             />

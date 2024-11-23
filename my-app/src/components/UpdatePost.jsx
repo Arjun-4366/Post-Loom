@@ -15,7 +15,7 @@ function UpdatePost({ open, setOpen, postData }) {
   useEffect(() => {
     if (postData) {
       setDescription(postData.description);
-      setPreviewImage(`https://post-loom.onrender.com/Images/${postData.image}`);
+      setPreviewImage(`${API_URL}/Images/${postData.image}`);
     }
   }, [open, postData]);
 
@@ -52,7 +52,7 @@ function UpdatePost({ open, setOpen, postData }) {
 
     try {
       const response = await axios.put(
-        `https://post-loom.onrender.com/api/posts/${postData._id}`,
+        `${API_URL}/api/posts/${postData._id}`,
         formData,
         {
           headers: {

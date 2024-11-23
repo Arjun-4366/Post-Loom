@@ -2,6 +2,7 @@ import React, { useRef, useState } from "react";
 import { FaRegUserCircle } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import axios from "axios";
+import { API_URL } from "../utils/apiConfig";
 
 function Register() {
   const [userData, setUserData] = useState({
@@ -33,7 +34,7 @@ function Register() {
         },
       };
       const response = await axios.post(
-        "https://post-loom.onrender.com/api/register",
+        `${API_URL}/api/register`,
         formData,
         config
       );
