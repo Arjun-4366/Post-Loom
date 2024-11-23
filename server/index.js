@@ -6,7 +6,7 @@ dotenv.config()
 const postRouter = require('./routes/postRoutes')
 const userRouter = require("./routes/userRoutes")
 app.use(cors({
-    origin: "http://localhost:3000", 
+    origin: "http://13.234.80.189:3000", 
     methods: ["GET", "POST", "PUT", "DELETE"], 
     credentials: true,
   }));
