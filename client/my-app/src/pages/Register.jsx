@@ -33,7 +33,7 @@ function Register() {
         },
       };
       const response = await axios.post(
-        "http://localhost:4001/api/register",
+        "https://post-loom.onrender.com/api/register",
         formData,
         config
       );
