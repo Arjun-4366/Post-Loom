@@ -21,6 +21,7 @@ const createNewPost = async (req, res) => {
       )
       console.log("all post",allPosts)
       res.status(200).json(allPosts);
+      req.send("backend is working")
     } catch (err) {
       console.log(err.message);
       res.status(500).json({ error: err.message });

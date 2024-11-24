@@ -23,6 +23,11 @@ app.use(express.urlencoded({extended:true}))
 app.use('/api/posts',postRouter)
 app.use('/api',userRouter)
 
-app.listen(PORT,()=>{
+app.get('/', (req, res) => {
+  res.send('backend is working');
+});
+
+app.listen(PORT,(req,res)=>{
     console.log('server is listening at',PORT)
+    res.send("backend is working")
 })
