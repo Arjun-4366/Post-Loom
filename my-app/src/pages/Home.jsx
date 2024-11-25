@@ -2,16 +2,9 @@ import React, { useEffect, useState } from 'react'
 import PostCard from '../components/PostCard';
 import Users from '../components/Users';
 import Navbar from '../components/Navbar';
-import { useNavigate } from 'react-router-dom';
+
 function Home() {
-  const navigate = useNavigate()
-  useEffect(()=>{
-    const userData = JSON.parse(localStorage.getItem("userDetails"))
-    if(!userData){
-      console.log('user not authenticated')
-      navigate('/')
-    }
-  },[navigate])
+
 
     return (
       <div className="flex min-h-screen bg-white p-3 gap-2">
