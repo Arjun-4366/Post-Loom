@@ -8,7 +8,7 @@ dotenv.config()
 const postRouter = require('./routes/postRoutes')
 const userRouter = require("./routes/userRoutes")
 app.use(cors({
-    origin: "https://post-loom.vercel.app", 
+    origin: "https://0.0.0.0", 
     methods: ["GET", "POST", "PUT", "DELETE"], 
     credentials: true,
   }));
